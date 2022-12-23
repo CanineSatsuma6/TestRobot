@@ -27,5 +27,8 @@ void Drive::TankDrive(double left, double right)
 
 void Drive::SetDriveMode(DriveMode mode)
 {
-    
+    if (_driveMode != mode)
+    {
+        _driveMode = mode;
+    }
 }
