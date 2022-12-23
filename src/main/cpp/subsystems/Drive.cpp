@@ -22,7 +22,11 @@ void Drive::ArcadeDrive(double drive, double rotate)
 
 void Drive::TankDrive(double left, double right)
 {
+    _frontLeftMotor.Set(left);
+    _backLeftMotor.Set(left);
 
+    _frontRightMotor.Set(right);
+    _backRightMotor.Set(right);
 }
 
 void Drive::SetDriveMode(DriveMode mode)
