@@ -1,3 +1,6 @@
+#include<cmath>
+#include<algorithm>
+
 #include "subsystems/Drive.h"
 
 Drive::Drive() :
@@ -17,7 +20,17 @@ Drive::Drive() :
 
 void Drive::ArcadeDrive(double drive, double rotate)
 {
+    double left  = drive + rotate;
+    double right = drive - rotate;
+    double max   = std::max(std::abs(left), std::abs(right));
 
+    if (max > 1)
+    {
+        left  /= max;
+        right /= max;
+    }
+
+    TankDrive(left, right);
 }
 
 void Drive::TankDrive(double left, double right)
