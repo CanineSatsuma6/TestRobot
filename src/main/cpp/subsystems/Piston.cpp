@@ -13,7 +13,7 @@ void Piston::Extend()
 
 void Piston::Retract()
 {
-
+    _piston.Set(false);
 }
 
 void Piston::Set(bool on)
