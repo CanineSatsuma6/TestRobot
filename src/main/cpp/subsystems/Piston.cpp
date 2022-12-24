@@ -8,7 +8,7 @@ Piston::Piston() :
 
 void Piston::Extend()
 {
-
+    _piston.Set(true);
 }
 
 void Piston::Retract()
