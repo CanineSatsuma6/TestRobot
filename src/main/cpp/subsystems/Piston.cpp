@@ -18,7 +18,7 @@ void Piston::Retract()
 
 void Piston::Set(bool on)
 {
-
+    _piston.Set(on);
 }
 
 bool Piston::Get()
