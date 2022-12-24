@@ -23,5 +23,5 @@ void Piston::Set(bool on)
 
 bool Piston::Get()
 {
-
+    return _piston.Get();
 }
